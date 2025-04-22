@@ -1,0 +1,5 @@
+# ./.streamlit/config.toml
+
+[server]
+# turn off all filesystem watching
+fileWatcherType = "none"
