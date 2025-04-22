@@ -11,3 +11,5 @@ huggingface-hub
 InstructorEmbedding
 sentence-transformers
 pydantic
+HuggingFaceEmbeddings
+

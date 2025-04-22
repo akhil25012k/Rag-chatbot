@@ -7,6 +7,8 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain.text_splitter import CharacterTextSplitter  # Added this import
 from dotenv import load_dotenv
+from langchain.embeddings import HuggingFaceEmbeddings
+
 import os
 
 # Load environment variables
@@ -32,7 +34,10 @@ def get_text_chunks(text):
     return chunks
 
 def get_embeddings(text_chunks):
-    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+    
+    embeddings = HuggingFaceEmbeddings( model_name="sentence-transformers/all-MiniLM-L6-v2")
+
+    
     return embeddings
 
 def get_conversational_chain(vectorstore):
