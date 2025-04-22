@@ -64,7 +64,7 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    user_input = st.text_input("Upload files, Hit Submit button, then ask the questions.:blue[- Mythresh N]:sunglasses:")
+    user_input = st.text_input("Upload files, Hit Submit button, then ask the questions.:blue[- Akhil]:sunglasses:")
     if user_input and st.session_state.conversational_chain:
         handle_userinput(user_input)
 
